@@ -13,8 +13,8 @@ class playerInfo:
     TotalHP = 0                              # Total Character Hitpoints
     CurrentHP = 0                            # The current character Hitpoints
     Speed = 0                                # Chacter Speed (ft)
-    # Chacter social alignment used for choices
     CharacterAlignment = "Default_alignment"
+    # Chacter social alignment used for choices
     Inventory = []
 
 
