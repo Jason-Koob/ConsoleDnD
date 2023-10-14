@@ -1,6 +1,7 @@
 import random
 import os
 from art import *
+from dndClasses import *
 import time
 
 
