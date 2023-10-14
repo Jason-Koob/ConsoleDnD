@@ -168,6 +168,7 @@ else:
 tprint("Character Stats\nand modifers", font="Cybermedium")
 print("Normally you would roll a 6-sided die (d6) 4 times and remove the lowest value and then choose which stat get which number.")
 print("The number called the modifer is applied to your dice rolls and changes your rolls for better or worse.\n\n")
+# Describing what a stat is used for
 time.sleep(10)
 print("Strength (STR) - Being able to crush a tomato\n")
 time.sleep(2)
@@ -182,18 +183,22 @@ time.sleep(2)
 print("Charisma (CHA) - Being able to sell a bad tomato\n")
 time.sleep(2)
 
-print("\nYour rolls to distribute are:\n" + str(playerRolls) +
-      "\nThe modifers going along with these rolls are: \n" + str(playerRollsModifer))
+print("\nYour rolls to distribute are:\n" + str(playerRolls) +  # prints how many rolls are left
+      "\nThe modifers going along with these rolls are: \n" + str(playerRollsModifer))  # Prints each modifer for each roll left
 
 print("\n\nWhich roll will go to Strength?\n")
 option = input()
+# Getting the index value of the chosen roll
 RollLocation = playerRolls.index(int(option))
+# Removing that roll for the list so it can't be used again
 playerRolls.pop(RollLocation)
-playerStats.STR = option
+playerStats.STR = option  # Setting the chosen value to the chosen stat
+# Getting the modifer of the value
 playerModifier.STR = (int(playerStats.STR) - 10)//2
 
-playerRollsModifer.clear()
+playerRollsModifer.clear()  # Clearing the list of modifers
 for rolls in playerRolls:
+    # A for loop to get the modifers of the values still in the 'rolls' list
     playerRollsModifer.append((int(rolls) - 10)//2)
 
 print("\nROLLS:\n" + str(playerRolls) +
