@@ -1,7 +1,8 @@
 import random
 import os
 from art import *
-# from dndClasses import charClass, stat2skill, race, armor
+# from dndClasses import charClass
+# , stat2skill, race, armor
 import time
 
 
@@ -29,9 +30,8 @@ class playerStats:
     WIS = 0
     CHA = 0
 
+
 # class for storing chacter modifers
-
-
 class playerModifier:
     STR = (playerStats.STR - 10)//2
     DEX = (playerStats.DEX - 10)//2

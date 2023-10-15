@@ -79,13 +79,11 @@ class race:
         DarkVision = 1
         Stats = int(playerStats.DEX)+2
 
-    class Dward:
+    class Dwarf:
         Movement = 25
         DarkVision = 1
         Stats = int(playerStats.CON)+2
 
-
-# print(Race.Tiefling.Stats)
 
 # Classes for each character class
 class charClass:
