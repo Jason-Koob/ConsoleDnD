@@ -68,14 +68,29 @@ class story:
     SideEnemy = ["goblin", "ghoul", "zombie", "lion", "gnome"]
 
 
+def collectRolls():
+    currentrolls = []
+
+    currentrolls.append(random.randrange(1, 6))
+    currentrolls.append(random.randrange(1, 6))
+    currentrolls.append(random.randrange(1, 6))
+    currentrolls.append(random.randrange(1, 6))
+    sorted(currentrolls)
+    currentrolls.pop(0)
+
+    sum(currentrolls)
+
+    return sum(currentrolls)
+
+
 playerRolls = []
 # Roll for stats and add them to the playerRolls array
-playerRolls.append(random.randrange(3, 18))
-playerRolls.append(random.randrange(3, 18))
-playerRolls.append(random.randrange(3, 18))
-playerRolls.append(random.randrange(3, 18))
-playerRolls.append(random.randrange(3, 18))
-playerRolls.append(random.randrange(3, 18))
+playerRolls.append(collectRolls())
+playerRolls.append(collectRolls())
+playerRolls.append(collectRolls())
+playerRolls.append(collectRolls())
+playerRolls.append(collectRolls())
+playerRolls.append(collectRolls())
 
 
 playerRollsModifer = []
@@ -224,8 +239,8 @@ time.sleep(1)
 print("Charisma (CHA) - Being able to sell a bad tomato\n")
 time.sleep(1)
 
-print("\nROLLS:\n" + str(playerRolls) +
-      "\n\nMODS: \n" + str(playerRollsModifer))
+print("\nROLLS:\n" + str(sorted(playerRolls)) +
+      "\n\nMODS: \n" + str(sorted(playerRollsModifer)))
 
 print("\n\nWhich roll will go to Strength?")
 option = input()
@@ -244,8 +259,8 @@ for rolls in playerRolls:
     # A for loop to get the modifers of the values still in the 'rolls' list
     playerRollsModifer.append((int(rolls) - 10)//2)
 
-print("\nROLLS:\n" + str(playerRolls) +
-      "\n\nMODS: \n" + str(playerRollsModifer))
+print("\nROLLS:\n" + str(sorted(playerRolls)) +
+      "\n\nMODS: \n" + str(sorted(playerRollsModifer)))
 
 print("\n\nWhich roll will go to Dexterity?")
 option = input()
@@ -259,8 +274,8 @@ playerRollsModifer.clear()
 for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
-print("\nROLLS:\n" + str(playerRolls) +
-      "\n\nMODS: \n" + str(playerRollsModifer))
+print("\nROLLS:\n" + str(sorted(playerRolls)) +
+      "\n\nMODS: \n" + str(sorted(playerRollsModifer)))
 
 print("\n\nWhich roll will go to Constitution?")
 option = input()
@@ -273,8 +288,8 @@ playerRollsModifer.clear()
 for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
-print("\nROLLS:\n" + str(playerRolls) +
-      "\n\nMODS: \n" + str(playerRollsModifer))
+print("\nROLLS:\n" + str(sorted(playerRolls)) +
+      "\n\nMODS: \n" + str(sorted(playerRollsModifer)))
 
 print("\n\nWhich roll will go to Intelligence?")
 option = input()
@@ -287,8 +302,8 @@ playerRollsModifer.clear()
 for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
-print("\nROLLS:\n" + str(playerRolls) +
-      "\n\nMODS: \n" + str(playerRollsModifer))
+print("\nROLLS:\n" + str(sorted(playerRolls)) +
+      "\n\nMODS: \n" + str(sorted(playerRollsModifer)))
 
 print("\n\nWhich roll will go to Wisdom?")
 option = input()
@@ -301,8 +316,8 @@ playerRollsModifer.clear()
 for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
-print("\nROLLS:\n" + str(playerRolls) +
-      "\n\nMODS: \n" + str(playerRollsModifer))
+print("\nROLLS:\n" + str(sorted(playerRolls)) +
+      "\n\nMODS: \n" + str(sorted(playerRollsModifer)))
 
 print("\n\nWhich roll will go to Charisma?")
 option = input()
@@ -312,7 +327,7 @@ playerStats.CHA = option
 playerModifier.CHA = (int(playerStats.CHA) - 10)//2
 
 # Print Stats
-print("Your stats are: \n"
+print("\nYour stats are: \n"
       + "STR: " + str(playerStats.STR) + " (" + str(playerModifier.STR) + ")\n"
       + "DEX: " + str(playerStats.DEX) + " (" + str(playerModifier.DEX) + ")\n"
       + "CON: " + str(playerStats.CON) + " (" + str(playerModifier.CON) + ")\n"
@@ -320,3 +335,7 @@ print("Your stats are: \n"
       + "WIS: " + str(playerStats.WIS) + " (" + str(playerModifier.WIS) + ")\n"
       + "CHA: " + str(playerStats.CHA) + " (" + str(playerModifier.CHA) + ")\n")
 time.sleep(5)
+
+# Race
+# Armor
+# Story Time baby!!!
