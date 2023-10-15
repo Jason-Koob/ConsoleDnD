@@ -3,23 +3,23 @@ from DnD import playerStats
 
 
 class stat2skill:
-    Acrobatics = "DEX"
-    AnimalHandling = "WIS"
-    Arcana = "INT"
-    Decption = "CHA"
-    History = "INT"
-    Insight = "WIS"
-    Intimidation = "CHA"
-    Investigation = "INT"
-    Medicine = "WIS"
-    Nature = "INT"
-    Perception = "WIS"
-    Performance = "CHA"
-    Persuasion = "CHA"
-    Religion = "INT"
-    SlightOfHand = "DEX"
-    Stealth = "DEX"
-    Survival = "WIS"
+    Acrobatics = int(playerStats.DEX)
+    AnimalHandling = int(playerStats.WIS)
+    Arcana = int(playerStats.INT)
+    Deception = int(playerStats.CHA)
+    History = int(playerStats.INT)
+    Insight = int(playerStats.WIS)
+    Intimidation = int(playerStats.CHA)
+    Investigation = int(playerStats.INT)
+    Medicine = int(playerStats.WIS)
+    Nature = int(playerStats.INT)
+    Perception = int(playerStats.WIS)
+    Performance = int(playerStats.CHA)
+    Persuasion = int(playerStats.CHA)
+    Religion = int(playerStats.INT)
+    SlightOfHand = int(playerStats.DEX)
+    Stealth = int(playerStats.DEX)
+    Survival = int(playerStats.WIS)
 
 
 class armor:

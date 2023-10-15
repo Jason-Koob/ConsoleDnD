@@ -53,10 +53,13 @@ class world:
 
 
 class story:
-    mainChoice = ["recover stolen goods", "kill some mischevious goblins",
+    mainChoice = ["recover stolen goods", "take care of some local bandits",
                   "recover a relgious artifact"]  # List of possible main quests
     # Determines main quest of the story
     mainquest = random.choice(mainChoice)
+    mainLocChoice = ["castle", "cave", "ancient vault", "dungeon", "cottage"]
+    mainBBEGname = ["Carl", "Atrax", "Gurzung", "Voltion", "Dante"]
+    SideEnemy = ["goblin", "ghoul", "zombie", "lion", "gnome"]
 
 
 playerRolls = []
