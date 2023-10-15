@@ -214,8 +214,8 @@ time.sleep(1)
 print("Charisma (CHA) - Being able to sell a bad tomato\n")
 time.sleep(1)
 
-print("\nYour rolls to distribute are: " + str(playerRolls) +  # prints how many rolls are left
-      "\nThe modifers going along with these rolls are: " + str(playerRollsModifer))  # Prints each modifer for each roll left
+print("\nROLLS:\n" + str(playerRolls) +
+      "\nMODS: \n" + str(playerRollsModifer))
 
 print("\n\nWhich roll will go to Strength?\n")
 option = input()

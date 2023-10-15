@@ -22,6 +22,68 @@ class stat2skill:
     Survival = "WIS"
 
 
+class armor:
+    # Light (AC + DEX)
+    Padded = 11
+    Leather = 11
+    Studded = 12
+    Hide = 12
+
+    # Medium (AC + DEX (MAX 2))
+    Chain = 13
+    ScaleMail = 14
+    Breastplate = 14
+
+    # Heavy
+    Ring = 14
+    ChainMail = 16
+    Splint = 17
+
+
+class armorMovement:
+    Leather = 11
+    Studded = 12
+    Hide = 12
+    Chain = 13
+    ScaleMail = 14
+    Breastplate = 14
+    Ring = 14
+    ChainMail = 16
+    Splint = 17
+
+
+class Race:
+    class Tiefling:
+        Movement = 30
+        DarkVision = 1
+        Stats = int(playerStats.CHA)+2, int(playerStats.INT)+1
+
+    class Human:
+        Movement = 30
+        DarkVision = 0
+        Stats = int(playerStats.STR)+1, int(playerStats.DEX)+1, int(playerStats.CON) + \
+            1, int(playerStats.INT)+1, int(playerStats.WIS) + \
+            1, int(playerStats.CHA)+1
+
+    class Gnome:
+        Movement = 25
+        DarkVision = 1
+        Stats = int(playerStats.INT)+2
+
+    class Elf:
+        Movement = 30
+        DarkVision = 1
+        Stats = int(playerStats.DEX)+2
+
+    class Dward:
+        Movement = 25
+        DarkVision = 1
+        Stats = int(playerStats.CON)+2
+
+
+# print(Race.Tiefling.Stats)
+
+
 class Wizard:
     HitDie = random.randrange(1, 6)
     PrimaryStat = playerStats.INT
