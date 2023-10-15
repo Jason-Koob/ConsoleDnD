@@ -225,9 +225,9 @@ print("Charisma (CHA) - Being able to sell a bad tomato\n")
 time.sleep(1)
 
 print("\nROLLS:\n" + str(playerRolls) +
-      "\nMODS: \n" + str(playerRollsModifer))
+      "\n\nMODS: \n" + str(playerRollsModifer))
 
-print("\n\nWhich roll will go to Strength?\n")
+print("\n\nWhich roll will go to Strength?")
 option = input()
 # Getting the index value of the chosen roll
 RollLocation = playerRolls.index(int(option))
@@ -245,9 +245,9 @@ for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
 print("\nROLLS:\n" + str(playerRolls) +
-      "\nMODS: \n" + str(playerRollsModifer))
+      "\n\nMODS: \n" + str(playerRollsModifer))
 
-print("\n\nWhich roll will go to Dexterity?\n")
+print("\n\nWhich roll will go to Dexterity?")
 option = input()
 RollLocation = playerRolls.index(int(option))
 
@@ -260,9 +260,9 @@ for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
 print("\nROLLS:\n" + str(playerRolls) +
-      "\nMODS: \n" + str(playerRollsModifer))
+      "\n\nMODS: \n" + str(playerRollsModifer))
 
-print("\n\nWhich roll will go to Constitution?\n")
+print("\n\nWhich roll will go to Constitution?")
 option = input()
 RollLocation = playerRolls.index(int(option))
 playerRolls.pop(RollLocation)
@@ -274,9 +274,9 @@ for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
 print("\nROLLS:\n" + str(playerRolls) +
-      "\nMODS: \n" + str(playerRollsModifer))
+      "\n\nMODS: \n" + str(playerRollsModifer))
 
-print("\n\nWhich roll will go to Intelligence?\n")
+print("\n\nWhich roll will go to Intelligence?")
 option = input()
 RollLocation = playerRolls.index(int(option))
 playerRolls.pop(RollLocation)
@@ -288,9 +288,9 @@ for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
 print("\nROLLS:\n" + str(playerRolls) +
-      "\nMODS: \n" + str(playerRollsModifer))
+      "\n\nMODS: \n" + str(playerRollsModifer))
 
-print("\n\nWhich roll will go to Wisdom?\n")
+print("\n\nWhich roll will go to Wisdom?")
 option = input()
 RollLocation = playerRolls.index(int(option))
 playerRolls.pop(RollLocation)
@@ -302,9 +302,9 @@ for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
 print("\nROLLS:\n" + str(playerRolls) +
-      "\nMODS: \n" + str(playerRollsModifer))
+      "\n\nMODS: \n" + str(playerRollsModifer))
 
-print("\n\nWhich roll will go to Charisma?\n")
+print("\n\nWhich roll will go to Charisma?")
 option = input()
 RollLocation = playerRolls.index(int(option))
 playerRolls.pop(RollLocation)
