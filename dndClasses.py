@@ -40,16 +40,16 @@ class armor:
     Splint = 17
 
 
-class armorMovement:
-    Leather = 11
-    Studded = 12
-    Hide = 12
-    Chain = 13
-    ScaleMail = 14
-    Breastplate = 14
-    Ring = 14
-    ChainMail = 16
-    Splint = 17
+# class armorMovement:
+#     Leather = 11
+#     Studded = 12
+#     Hide = 12
+#     Chain = 13
+#     ScaleMail = 14
+#     Breastplate = 14
+#     Ring = 14
+#     ChainMail = 16
+#     Splint = 17
 
 
 class Race:
