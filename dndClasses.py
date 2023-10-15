@@ -23,6 +23,9 @@ class stat2skill:
 
 
 class armor:
+    # None
+    NoArmor = int(playerStats.DEX) + 10
+
     # Light (AC + DEX)
     Padded = 11
     Leather = 11
