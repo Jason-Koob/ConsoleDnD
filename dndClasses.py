@@ -54,11 +54,12 @@ class armor:
 #     ChainMail = 16
 #     Splint = 17
 
-
+# Class for races, containing all other races
 class Race:
     class Tiefling:
         Movement = 30
         DarkVision = 1
+        # Changes stats for changes from race
         Stats = int(playerStats.CHA)+2, int(playerStats.INT)+1
 
     class Human:
@@ -86,7 +87,7 @@ class Race:
 
 # print(Race.Tiefling.Stats)
 
-
+# Classes for each character class
 class Wizard:
     HitDie = random.randrange(1, 6)
     PrimaryStat = playerStats.INT

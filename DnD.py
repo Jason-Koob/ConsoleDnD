@@ -18,8 +18,10 @@ class playerInfo:
     # Chacter social alignment used for choices
     Inventory = []
 
+# class for storing character stats
 
-class playerStats:  # class for storing character stats
+
+class playerStats:
     STR = 0
     DEX = 0
     CON = 0
@@ -27,8 +29,10 @@ class playerStats:  # class for storing character stats
     WIS = 0
     CHA = 0
 
+# class for storing chacter modifers
 
-class playerModifier:  # class for storing chacter modifers
+
+class playerModifier:
     STR = (playerStats.STR - 10)//2
     DEX = (playerStats.DEX - 10)//2
     CON = (playerStats.CON - 10)//2
@@ -38,8 +42,9 @@ class playerModifier:  # class for storing chacter modifers
 
 
 class world:
+    # List of possible regions for the player to play in
     regionChoice = ["Argonia", "Scandanavia", "The Forgotten Realms", "Brazil",
-                    "Estonia", "Stronghelm"]  # List of possible regions for the player to play in
+                    "Estonia", "Stronghelm"]
     # List of possible buildings within a town to play in
     locChoice = ["tavern", "library", "blacksmith",
                  "apothicary", "townhall", "sewer system"]
@@ -53,16 +58,18 @@ class world:
 
 
 class story:
+    # List of possible main quests
     mainChoice = ["recover stolen goods", "take care of some local bandits",
-                  "recover a relgious artifact"]  # List of possible main quests
+                  "recover a relgious artifact"]
     # Determines main quest of the story
     mainquest = random.choice(mainChoice)
     mainLocChoice = ["castle", "cave", "ancient vault", "dungeon", "cottage"]
-    mainBBEGname = ["Carl", "Atrax", "Gurzung", "Voltion", "Dante"]
+    mainBBEGname = ["Carl", "Atrax", "Yurzung", "Voltion", "Dante"]
     SideEnemy = ["goblin", "ghoul", "zombie", "lion", "gnome"]
 
 
 playerRolls = []
+# Roll for stats and add them to the playerRolls array
 playerRolls.append(random.randrange(3, 18))
 playerRolls.append(random.randrange(3, 18))
 playerRolls.append(random.randrange(3, 18))
@@ -226,11 +233,13 @@ option = input()
 RollLocation = playerRolls.index(int(option))
 # Removing that roll for the list so it can't be used again
 playerRolls.pop(RollLocation)
-playerStats.STR = option  # Setting the chosen value to the chosen stat
+# Setting the chosen value to the chosen stat
+playerStats.STR = option
 # Getting the modifer of the value
 playerModifier.STR = (int(playerStats.STR) - 10)//2
 
-playerRollsModifer.clear()  # Clearing the list of modifers
+# Clearing the list of modifers
+playerRollsModifer.clear()
 for rolls in playerRolls:
     # A for loop to get the modifers of the values still in the 'rolls' list
     playerRollsModifer.append((int(rolls) - 10)//2)
