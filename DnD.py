@@ -1,7 +1,7 @@
 import random
 import os
 from art import *
-from dndClasses import *
+# from dndClasses import *
 import time
 
 
@@ -67,12 +67,15 @@ playerRolls.append(random.randrange(3, 18))
 playerRolls.append(random.randrange(3, 18))
 playerRolls.append(random.randrange(3, 18))
 
+
 playerRollsModifer = []
 
 for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
+
 # ---------------------- START ---------------------- #
+os.system('cls')
 tprint("Command Line\nDungeons and Dragons", font="Cybermedium")
 print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPress Enter to continue.")
 option = input()
@@ -211,8 +214,8 @@ time.sleep(1)
 print("Charisma (CHA) - Being able to sell a bad tomato\n")
 time.sleep(1)
 
-print("\nYour rolls to distribute are:\n" + str(playerRolls) +  # prints how many rolls are left
-      "\nThe modifers going along with these rolls are: \n" + str(playerRollsModifer))  # Prints each modifer for each roll left
+print("\nYour rolls to distribute are: " + str(playerRolls) +  # prints how many rolls are left
+      "\nThe modifers going along with these rolls are: " + str(playerRollsModifer))  # Prints each modifer for each roll left
 
 print("\n\nWhich roll will go to Strength?\n")
 option = input()
@@ -235,6 +238,7 @@ print("\nROLLS:\n" + str(playerRolls) +
 print("\n\nWhich roll will go to Dexterity?\n")
 option = input()
 RollLocation = playerRolls.index(int(option))
+
 playerRolls.pop(RollLocation)
 playerStats.DEX = option
 playerModifier.DEX = (int(playerStats.DEX) - 10)//2
