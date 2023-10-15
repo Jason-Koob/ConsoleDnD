@@ -1,7 +1,7 @@
 import random
 import os
 from art import *
-# from dndClasses import *
+# from dndClasses import charClass, stat2skill, race, armor
 import time
 
 

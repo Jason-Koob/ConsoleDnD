@@ -55,7 +55,7 @@ class armor:
 #     Splint = 17
 
 # Class for races, containing all other races
-class Race:
+class race:
     class Tiefling:
         Movement = 30
         DarkVision = 1
