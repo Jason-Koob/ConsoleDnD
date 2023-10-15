@@ -69,17 +69,20 @@ class story:
 
 
 def collectRolls():
+    # An internal array within the function, as to not carry over previous results
     currentrolls = []
 
+    # Rolling 1d6 x4
     currentrolls.append(random.randrange(1, 6))
     currentrolls.append(random.randrange(1, 6))
     currentrolls.append(random.randrange(1, 6))
     currentrolls.append(random.randrange(1, 6))
+    # Get the results in order from least to greatest
     sorted(currentrolls)
+    # Remove the lowest
     currentrolls.pop(0)
 
-    sum(currentrolls)
-
+    # Return the sum of the remain values in the array as the output of the function
     return sum(currentrolls)
 
 
@@ -94,7 +97,7 @@ playerRolls.append(collectRolls())
 
 
 playerRollsModifer = []
-
+# Getting the modifers for each stat
 for rolls in playerRolls:
     playerRollsModifer.append((int(rolls) - 10)//2)
 
